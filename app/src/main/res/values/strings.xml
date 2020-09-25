@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">assignment1</string>
+    <string name="display">Demonstrating Text</string>
+    <string name="ducnguyen">Simple Resources</string>
+
+    <string-array name="activity">
+        <item>AiActivity</item>
+        <item>VrActivity</item>
+    </string-array>
 </resources>

@@ -56,16 +56,16 @@ public class MainActivity extends AppCompatActivity {
         TextView theTextView = (TextView) findViewById(R.id.textView1);
         theTextView.setText("onCreate excuted");
 
+        String[] sports = getResources().getStringArray(R.array.activity);
 
         listView = (ListView) findViewById(R.id.listview);
         ArrayList<String> arrayList= new ArrayList<>();
 
-        arrayList.add("AiActivity");
-        arrayList.add("VrActivity");
 
-        ArrayAdapter arrayAdapter= new ArrayAdapter(this,android.R.layout.simple_list_item_1,arrayList);
 
-        listView.setAdapter(arrayAdapter);
+        //Row layout defined by Android: android.R.layout.simple_list_item_1
+        listView.setAdapter(new ArrayAdapter<String>(this,
+                android.R.layout.simple_list_item_1, sports));
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
